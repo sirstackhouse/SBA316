@@ -1,26 +1,23 @@
 /* Fonts */
 @font-face {
   font-family: "Geist";
-  src: url("../Fonts/Geist/webfonts/Geist-Black.woff2") format("woff2"),
-    url("../Fonts/Geist/webfonts/Geist-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
+  src: url("../Fonts/Geist/webfonts/Geist-Medium.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Thunder";
-  src: url("../Fonts/THUNDER/Fonts/Web-TT/Thunder-ExtraBoldHC.woff2")
+  src: url("../Fonts/THUNDER/Fonts/Web-TT/Thunder-ThinLC.woff2")
     format("woff2");
 }
 
-#title {
+/* #title {
   font-family: "Thunder";
   font-weight: 900;
   font-size: 100px;
   color: white;
   text-align: center;
   margin-top: 10px;
-}
+} */
 
 /* Document */
 * {
@@ -35,7 +32,7 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: #1D201F;
+  background: #393A10;
   padding: 10px;
 }
 
@@ -46,19 +43,23 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.task-app h2 {
+.task-app h1 {
+    font-family: 'Thunder';
+    font-size: 70px;
     color: #1D201F;
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
+    text-decoration: underline;
 }
 
-.task-app h2 img {
+/* .task-app h2 img {
     width: 30px;
     margin-left: 10px;
-}
+} */
 
 .row {
     display: flex;
@@ -81,7 +82,7 @@ input {
 button {
     border: none;
     outline: none;
-    background: #1D201F;
+    background: #D65108;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -106,7 +107,7 @@ ul li::before {
     background-image: url("../Assets/unchecked.png");
     background-size: cover;
     background-position: center;
-    top: 12px;
+    top: 9px;
     left: 8px;
 }
 ul li.checked {
@@ -116,3 +117,56 @@ ul li.checked {
 ul li.checked::before {
     background-image: url("../Assets/checked.png");
 }
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #edeef0;
+}
+
+/* ID's */
+#liquid-shape {
+    animation: liquid 8.5s infinite;
+}
+
+/* Animation */
+
+@keyframes liquid {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        background-size: 100% 100%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        background-size: 100% 100%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        background-size: 100% 100%;
+    }
+}
+
+/* @keyframes liquid {
+    0% {
+        border-radius: 20% ;
+        background-size: 100% 100%;
+    }
+    50% {
+        border-radius: 22% /28% ;
+        background-size: 100% 100%;
+    }
+    100% {
+        border-radius: 20% ;
+        background-size: 100% 100%;
+    }
+} */
