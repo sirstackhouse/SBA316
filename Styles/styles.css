@@ -1,31 +1,52 @@
 /* Fonts */
 @font-face {
-    font-family: 'Geist';
-    src: url("../Fonts/Geist/webfonts/Geist-Black.woff2") format("woff2"),
-        url("../Fonts/Geist/webfonts/Geist-Black.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
+  font-family: "Geist";
+  src: url("../Fonts/Geist/webfonts/Geist-Black.woff2") format("woff2"),
+    url("../Fonts/Geist/webfonts/Geist-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Thunder';
-    src: url("../Fonts/THUNDER/Fonts/Web-TT/Thunder-ExtraBoldHC.woff2") format("woff2"),;
+  font-family: "Thunder";
+  src: url("../Fonts/THUNDER/Fonts/Web-TT/Thunder-ExtraBoldHC.woff2")
+    format("woff2");
 }
 
-/* Elements */
-
-h1 {
-    font-family: 'Geist';
-    font-size: 100px;
-    font-weight: 900;
-    letter-spacing: -0.01em;
-    text-align: center;
+/* Document */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Geist";
+  box-sizing: border-box;
 }
 
-h2 {
-    font-family: 'Thunder';
-    font-size: 100px;
-    font-weight: 900;
-    letter-spacing: -0.01em;
-    text-align: center;
+/* Classes */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #1D201F;
+  padding: 10px;
+}
+
+.task-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.task-app h2 {
+    color: #1D201F;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-app h2 img {
+    width: 30px;
+    margin-left: 10px;
 }
