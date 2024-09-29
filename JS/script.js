@@ -1,5 +1,5 @@
 const newTaskInput =  document.getElementById('new-task');
-const taskList = document.getElementById('task-list');
+const taskList = document.querySelector('#task-list');
 function addTask() {
     if(newTaskInput.value === '') {
         alert('Please add a task');
@@ -15,6 +15,8 @@ function addTask() {
     }
 
 }
+
+
 
 taskList.addEventListener('click', function(e) {
     if(e.target.tagName === 'LI') {
